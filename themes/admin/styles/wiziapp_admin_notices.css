@@ -1,0 +1,33 @@
+#wiziapp_active_notice {
+	width: 740px;
+	height: 104px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	background-image: url(../images/install_banner.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+}
+
+#wiziapp_active_notice div:first-child {
+	width: 136px;
+	height: 35px;
+	position: absolute;
+	left: 574px;
+	top: 33px;
+	cursor: pointer;
+}
+
+#wiziapp_active_notice div:first-child + div {
+	width: 85px;
+	height: 11px;
+	position: absolute;
+	left: 28px;
+	top: 76px;
+	cursor: pointer;
+}
+
+p.wiziapp_notice_mode {
+	line-height: 150%;
+}
