@@ -1,6 +1,6 @@
 === Wiziapp - Create your own native iPhone App ===
 Contributors: wiziapp
-Tags: IPhone, iPhone app, AppStore, App Store, iphone theme, Apple, iOS, ipad, iPhone mobile theme
+Tags:
 Requires at least: 3.4
 Tested up to: 3.8.1
 Stable tag: v2.1.3a
