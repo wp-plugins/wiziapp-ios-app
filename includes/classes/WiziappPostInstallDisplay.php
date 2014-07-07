@@ -12,7 +12,7 @@ class WiziappPostInstallDisplay{
 	* This methods is registered in the batch processing function and will handle situations
 	* when the batch script ended due to a fatal error by alerting on the error to the client
 	*/
-	public function batchShutdown(){
+	public static function batchShutdown(){
 		$error = error_get_last();
 		if ($error['type'] != 1){
 			return;
@@ -47,7 +47,7 @@ class WiziappPostInstallDisplay{
 		exit();
 	}
 
-	public function batchProcess_Posts(){
+	public static function batchProcess_Posts(){
 		WiziappLog::getInstance()->write('DEBUG', "Got a request to process posts as a batch: " . print_r($_POST, TRUE),
 			"post_install.wiziapp_batch_process_posts");
 
@@ -96,7 +96,7 @@ class WiziappPostInstallDisplay{
 		exit();
 	}
 
-	public function batchProcess_Pages(){
+	public static function batchProcess_Pages(){
 		WiziappLog::getInstance()->write('DEBUG', "Got a request to process pages as a batch: " . print_r($_POST, TRUE),
 			"post_install.wiziapp_batch_process_pages");
 		global $wpdb;
@@ -144,7 +144,7 @@ class WiziappPostInstallDisplay{
 		exit();
 	}
 
-	public function batchProcess_Finish(){
+	public static function batchProcess_Finish(){
 		WiziappLog::getInstance()->write('INFO', "The batch processing is finished - 1",
 			"post_install.wiziapp_batch_process_finish");
 
@@ -171,7 +171,7 @@ class WiziappPostInstallDisplay{
 		exit;
 	}
 
-	public function reportIssue(){
+	public static function reportIssue(){
 		$report = new WiziappIssueReporter($_POST['data']);
 
 		ob_start();
@@ -182,7 +182,7 @@ class WiziappPostInstallDisplay{
 		exit();
 	}
 
-	public function display(){
+	public static function display(){
 		global $wpdb;
 
 		$from_php_to_js = array(
@@ -202,8 +202,8 @@ class WiziappPostInstallDisplay{
 
 			$post_types_string = '';
 			$post_types_array = WiziappComponentsConfiguration::getInstance()->get_post_types();
-			for ($i=0, $amount=count($post_types_array); $i<$amount; $i++){
-				$post_types_string .= '"'.$post_types_array[$i].'",';
+			foreach ($post_types_array as $post_type){
+				$post_types_string .= '"'.$post_type.'",';
 			}
 			$post_types_string = rtrim($post_types_string, ',');
 

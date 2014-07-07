@@ -3,7 +3,7 @@ Contributors: wiziapp
 Tags:
 Requires at least: 3.4
 Tested up to: 3.8.1
-Stable tag: v2.1.3a
+Stable tag: v2.1.3b
 License: GPLv2
 
 Turn your WordPress into a native iPhone App and publish it on the Apple AppStore. Install now and see a live simulation of your iPhone App

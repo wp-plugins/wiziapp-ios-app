@@ -81,7 +81,7 @@ class WiziappUpgradeDisplay{
 		exit;
 	}
 
-	function display(){
+	public static function display(){
 		?>
 		<script type="text/javascript" src="<?php echo esc_attr(plugins_url('themes/admin/scripts/jquery.tools.min.js', dirname(dirname(__FILE__)))); ?>"></script>
 		<style>

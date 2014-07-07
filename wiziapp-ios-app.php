@@ -4,7 +4,7 @@
 * Plugin Name: Wiziapp iOS App
 * Description: Create your own free HTML5 mobile App for iPhone, Android and WP8 users. Publish your App as a native App to the App Store and Google Play Market!
 * Author: Wiziapp Solutions Ltd.
-* Version: v2.1.3a
+* Version: v2.1.3b
 * Author URI: http://www.wiziapp.com/
 */
 /**
@@ -22,7 +22,7 @@ if ( ! defined('WP_WIZIAPP_BASE') ) {
 	define('WIZI_ABSPATH', realpath(ABSPATH));
 	define('WIZI_DIR_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR );
 	define('WIZIAPP_ENV', 'prod'); // can be dev/test/prod
-	define('WIZIAPP_VERSION', 'v2.1.3a');   // MAKE SURE TO UPDATE BOTH THIS AND THE UPPER VALUE
+	define('WIZIAPP_VERSION', 'v2.1.3b');   // MAKE SURE TO UPDATE BOTH THIS AND THE UPPER VALUE
 	define('WIZIAPP_P_VERSION', '2.1.3');   // The platform version
 	define('WIZIAPP_ANDROID_APP', '72dcc186a8d3d7b3d8554a14256389a4');
 

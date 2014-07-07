@@ -58,6 +58,13 @@ class WiziappPluginCompatibility {
 			global $wptouch_plugin;
 			remove_filter( 'wp', array(&$wptouch_plugin, 'bnc_do_redirect') );
 		}
+
+		/* Nextgen Gallery - Prevent the filter bypass */
+		if (class_exists('C_NextGen_Shortcode_Manager')) {
+			$manager = C_NextGen_Shortcode_Manager::get_instance();
+			remove_filter('the_content', array(&$manager, 'deactivate_all'), -(PHP_INT_MAX-1));
+			remove_filter('the_content', array(&$manager, 'parse_content'), PHP_INT_MAX-1);
+		}
 	}
 
 	public function install() {

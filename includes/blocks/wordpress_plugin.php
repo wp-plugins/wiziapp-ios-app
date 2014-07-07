@@ -130,19 +130,28 @@ function wiziapp_wordpress_filter($content) {
 		foreach($matches[0] as $matchId => $match) {
 			$images = '';
 
-			if (stripos($match, 'id=')) {
-				preg_match_all("/id=\"\d+\"/", $match, $idMatch);
-				if (!empty($match[0])) {
-					$postId = explode('=', $idMatch[0][0]);
+			if (preg_match("/ids=\"(\d+(?:,\d+)*)\"/", $match, $idMatch))
+			{
+				$imagesFromPost = array();
+				$postIds = explode(',', $idMatch[1]);
+				foreach ($postIds as $postId)
+				{
+					$imagesFromPost[] = get_post($postId);
 				}
-				$imagesFromPost =& get_children('post_type=attachment&post_mime_type=image&post_parent=' . trim($postId[1], '"\\'));
-			} else {
+			}
+			else if (preg_match("/id=\"(\d+)\"/", $match, $idMatch))
+			{
+				$postId = $idMatch[1];
+				$imagesFromPost = get_children('post_type=attachment&post_mime_type=image&post_parent=' . $postId);
+			}
+			else
+			{
 				if ($post) {
 					$postId = $post->ID;
 				} else {
 					$postId = $_REQUEST['pages'];
 				}
-				$imagesFromPost =& get_children('post_type=attachment&post_mime_type=image&post_parent=' . $postId);
+				$imagesFromPost = get_children('post_type=attachment&post_mime_type=image&post_parent=' . $postId);
 			}
 
 			if (stripos($match, 'include=')) {
