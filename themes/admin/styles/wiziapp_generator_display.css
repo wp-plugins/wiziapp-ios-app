@@ -1,0 +1,204 @@
+.overlay_close {
+	position:absolute; right:-17px; top:-17px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+#wpadminbar{
+	z-index: 99;
+}
+#wiziappBoxWrapper{
+	width: 390px;
+	height: 760px;
+	margin: 0 auto;
+	padding: 0;
+}
+#wiziappBoxWrapper.sim_loaded{
+	background-image: none;
+}
+#wiziappBoxWrapper #loading_placeholder{
+	position: absolute;
+	color:#E0E0E0;
+	font-weight:bold;
+	height:60px;
+	top: 260px;
+	left: 170px;
+	width:75px;
+	z-index: 0;
+}
+#wiziappBoxWrapper.sim_loaded #loading_placeholder{
+	display: none;
+}
+#wiziappBoxWrapper iframe{
+	visibility: hidden;
+}
+#wiziappBoxWrapper.sim_loaded iframe{
+	visibility: visible;
+}
+#wiziapp_generator_container{
+	background: #fff;
+}
+.processing_modal{
+	display:none;
+	height: 70px;
+	padding: 25px 35px;
+	width: 426px;
+}
+
+#enter_license_modal{
+	height: 280px;
+	width: 540px;
+	font-size: 16px;
+	padding: 0px;
+}
+#enter_license_modal .error{
+	margin-left: 20px;
+	padding-left: 20px;
+	color: #ff6161;
+	clear: both;
+}
+
+#enter_license_modal .success{
+	margin-left: 20px;
+	text-indent: 20px;
+	clear: both;
+}
+
+#enter_license_modal .processing_message{
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+#enter_license_modal input{
+	height: 31px;
+	line-height: 31px;
+	width: 203px;
+	text-indent: 5px;
+	float: left;
+	margin: 0px 10px 0px 20px;
+}
+
+#enter_license_modal .wizi_button{
+	height: 33px;
+	width: 86px;
+	text-align: center;
+	line-height: 33px;
+	float: left;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #474747;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0px 4px 0px 0px;
+}
+#enter_license_modal div.wrapper{
+	margin: 46px 46px 25px;
+}
+#enter_license_modal h2{
+	padding-left: 20px;
+	margin-bottom:30px;
+	color:#0fb3fb;
+}
+
+#publish_modal .processing_message{
+	font-size: 17px;
+}
+#publish_modal .loading_indicator{
+	margin: 8px auto 2px;
+}
+#create_account_modal_close{
+	display: none;
+	clear: both;
+	float: none;
+}
+.processing_modal .error{
+	margin: 0;
+	width: 407px;
+	border: 0 none;
+}
+#create_account_modal{
+	padding: 25px 55px;
+}
+#create_account_modal .error{
+	padding: 5px 0 20px 40px;
+	width: 360px;
+	border: 0 none;
+}
+
+.processing_message{
+	color: #000000;
+	font-size: 18px;
+	font-family: arial;
+	margin: 2px 0;
+	padding-left: 20px;
+}
+
+.processing_modal .loading_indicator{
+	width: 35px;
+	height: 35px;
+	margin: 2px auto;
+}
+#general_error_modal{
+	z-index: 999;
+}
+
+/* Start of the Wiziapp plugins install tab */
+#wiziapp_plugins_install{
+	width: 875px;
+	margin: 20px auto 0;
+	font-family: Arial;
+	display: none;
+}
+
+#wiziapp_plugins_install div.wiziapp_plugins_header{
+	height: 100px;
+}
+
+#wiziapp_plugins_install p{
+	clear: both;
+	font-size: 17px;
+}
+
+#wiziapp_plugins_install div.wiziapp_logo{
+	float: left;
+	margin-right: 5px;
+}
+
+#wiziapp_plugins_install div.wiziapp_logo a img{
+	border: 0 none;
+}
+
+#wiziapp_main_tabs{
+	list-style: none;
+	height: 48px;
+	width: 679px;
+	margin: 14px auto 0;
+	padding: 0;
+	float: right;
+	text-align: center;
+}
+
+#wiziapp_main_tabs li{
+	width: 104px;
+	height: 48px;
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+}
+
+#wiziapp_main_tabs li.active{
+	font-weight: bolder;
+	position: relative;
+	top: -4px;
+}
+
+#wiziapp_main_tabs li a{
+	color: #000;
+	text-decoration: none;
+	display: block;
+	margin-top: 23px;
+}
+
+#wiziapp_main_tabs li.active a{
+	margin-top: 18px;
+}
+/* Finish of the Wiziapp plugins install tab */
