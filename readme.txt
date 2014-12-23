@@ -2,7 +2,7 @@
 Contributors: wiziapp
 Tags:
 Requires at least: 3.4
-Tested up to: 3.8.1
+Tested up to: 4.1
 Stable tag: v2.1.3b
 License: GPLv2
 
