@@ -229,18 +229,13 @@ class WiziappContentHandler {
 	* @return string the link found after converting to the app format
 	*/
 	function getNewURL($url) {
-		$styling_page_links = '';
-		if (preg_match('@&page=\d+@is', $url, $match)) {
-			$styling_page_links = $match[0];
-		}
-
 		$post_id = url_to_postid($url);
 		if ($post_id) {
 			$post = get_post($post_id);
 			if ($post->post_type == 'page') {
-				return WiziappLinks::pageLink($post_id);
+				return WiziappLinks::pageLinkFromURL($url);
 			} elseif ($post->post_type == 'post') {
-				return WiziappLinks::postLink($post_id, $styling_page_links);
+				return WiziappLinks::postLinkFromURL($url);
 			}
 		} elseif ( strpos($url, '.png') !== FALSE || strpos($url, '.gif') !== FALSE || strpos($url, '.jpg') !== FALSE || strpos($url, '.jpeg') !== FALSE ) {
 			// If it is an image, convert to open image

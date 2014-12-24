@@ -38,6 +38,14 @@ class WiziappLinks{
 		return 'nav://page/' . urlencode(get_page_link($page_id));
 	}
 
+	public static function postLinkFromURL($url){
+		return 'nav://post/' . urlencode($url);
+	}
+
+	public static function pageLinkFromURL($url){
+		return 'nav://page/' . urlencode($url);
+	}
+
 	public static function categoryLink($category_id){
 		return 'nav://list/' . urlencode(WiziappContentHandler::getInstance()->get_blog_property('url') . "/?wiziapp/content/list/category/{$category_id}");
 	}
