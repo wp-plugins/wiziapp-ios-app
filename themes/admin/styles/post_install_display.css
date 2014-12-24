@@ -1,0 +1,100 @@
+#wpbody{
+	background-color: #fff;
+}
+#wiziapp_posts_progress_bar_container{
+	border: 1px solid #0000FF;
+	background-color: #C0C0FF;
+	position: relative;
+	width: 300px;
+	height: 30px;
+}
+#wiziapp_posts_progress_bar_container .progress_bar{
+	background-color: #0000FF;
+	width: 0%;
+}
+.progress_bar{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+}
+.progress_indicator{
+	color: #fff;
+	font-weight: bolder;
+	text-align:center;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#wiziapp_finalize_title, #wiziapp_pages_title, #all_done{
+	display: none;
+}
+#just_a_moment{
+	width: 262px;
+	margin: 50px auto 17px;
+	height: 32px;
+}
+#wizi_icon_processing{
+	width: 135px;
+	height: 93px;
+}
+#wizi_icon_wrapper{
+	margin: 52px auto 29px;
+	position: relative;
+	height:  93px;
+	width: 235px;
+}
+#current_progress_label{
+	position: absolute;
+	top: 40px;
+	right: 4px;
+}
+.text_label{
+	color: #0ca0f5;
+	font-weight: bold;
+	text-align: center;
+	font-size: 14px;
+	margin: 15px 0 9px;
+}
+#main_progress_bar_container{
+	width: 260px;
+	height: 12px;
+	position: relative;
+	margin: 0px auto;
+}
+#main_progress_bar_bg{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+#main_progress_bar{
+	z-index: 1;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	background-color: #0ca0f5;
+}
+#current_progress_indicator{
+	font-size: 17px;
+	margin: 10px;
+}
+#wizi_be_patient{
+	margin: 15px 0px 9px 32px;
+}
+#wiziapp_activation_container.no_js #wiziapp_js_disabled{
+	display: block;
+}
+#wiziapp_activation_container.no_js #wiziapp_js_enabled{
+	display: none;
+}
+#wiziapp_activation_container.js #wiziapp_js_disabled{
+	display: none;
+}
+#wiziapp_activation_container.js #wiziapp_js_enabled{
+	display: block;
+}
