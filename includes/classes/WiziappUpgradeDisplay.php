@@ -529,11 +529,7 @@ class WiziappUpgradeDisplay{
 				updateProgressBar();
 				jQuery("#wiziapp_finalize_title").show();
 
-				if ( webapp_installed === "1" ){
-					document.location.replace(document.location.href + "&wiziapp_reload_webapp=1");
-				} else {
-					document.location.reload();
-				}
+				document.location.reload();
 			}
 		</script>
 		<?php

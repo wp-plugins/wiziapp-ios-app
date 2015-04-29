@@ -172,7 +172,7 @@ class WiziappConfig implements WiziappIInstallable{
 	}
 
 	public function needUpgrade() {
-		return ( $this->internalVersion != $this->options['options_version'] );
+		return ( !isset($this->options['options_version']) || $this->internalVersion !== $this->options['options_version'] );
 	}
 
 	public function uninstall() {
